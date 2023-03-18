@@ -1,0 +1,29 @@
+# 0. Paths to ascii file (has to be absolute)
+path_to_ascii_files: /work/rupture3/sevan/PythonPackages/ascii2A3d/Data/CANVAS_SEMUCB
+
+# I. A3d model parameterization
+#  1. file containing spherical spline knot locations and levels
+sspl_knots_file: ./Data/grids/grid.reg.678.plus 
+
+#  2. file containing radial b-spline knots
+bspl_knots_file: ./Data/spline.par_26
+
+# II. Model sampling configuration
+#  1. file containing <lon> <lat> locations of sampling grid
+lateral_grid_file: ./sample_locations.dat
+
+#  2. file containing radial locations of sampling grid
+radial_grid_file: ./sample_radii.dat
+
+#  3. file containing vector of model samples, as a matrix of dimension
+#     num radii x num locations containing perturbations relative to the
+#     1D reference model (not percents)
+model_aggregated_file: ./samples_174_win.dat
+
+# 4. file containing the reference model
+path_to_ref_model: ./Data/Model1D.dat
+
+# III. Output file
+# Name of the output file to store matrix of coefficients as they should
+# appear in an A3d file: num radial b-splines x num spherical splines
+output_file: CANVAS_SEMUCB_l40-n50_s2000.A3d
